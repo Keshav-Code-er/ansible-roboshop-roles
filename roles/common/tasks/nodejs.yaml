@@ -5,8 +5,3 @@
   ansible.builtin.yum:
     name: nodejs
     state: installed
-
-# - name: Install the dependencies.
-#   ansible.builtin.command: npm install 
-#   args:
-#     chdir: /app
