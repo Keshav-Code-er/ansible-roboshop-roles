@@ -2,7 +2,7 @@
     ansible.builtin.copy:
       src: mongo.repo
       dest: /etc/yum.repos.d/mongo.repo
-      
+
 
   - name: install mongodb-client
     ansible.builtin.yum:
@@ -11,4 +11,4 @@
 
  
   - name: Load {{component}} Schema
-    ansible.builtin.command: mongo --host mongodb.joindevops.shop < /app/schema/{{component}}.js
+    ansible.builtin.command: mongo --host 172.31.25.251 < /app/schema/{{component}}.js
