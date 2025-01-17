@@ -1,6 +1,6 @@
 #I need to import a task nodejs.yaml in catalogue
 
-- name: Install Node.Js
-  ansible.builtin.import_role: 
-    name: common
-    tasks_from: nodejs
+- name: Install NodeJs
+  ansible.builtin.import_role:
+      name: common
+      tasks_from: nodejs
