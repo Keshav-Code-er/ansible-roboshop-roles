@@ -4,3 +4,8 @@
   ansible.builtin.import_role:
       name: common
       tasks_from: nodejs
+
+- name: Set-up app(user & directory)
+  ansible.builtin.import_role:
+      name: common
+      tasks_from: app-setup
