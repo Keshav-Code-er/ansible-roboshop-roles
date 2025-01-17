@@ -1,0 +1,12 @@
+- name: NPM source
+  ansible.builtin.shell: dnf module disable nodejs -y ; dnf module enable nodejs:18 -y
+
+- name: Install Node.Js
+  ansible.builtin.yum:
+    name: nodejs
+    state: installed
+
+- name: Install the dependencies.
+  ansible.builtin.command: npm install 
+  args:
+    chdir: /app
