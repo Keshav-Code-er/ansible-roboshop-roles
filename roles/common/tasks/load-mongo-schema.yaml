@@ -10,5 +10,5 @@
       state: installed
 
  
-  - name: Load {{component}} Schema
-    ansible.builtin.command: mongo --host mongodb.joindevops.shop < /app/schema/{{component}}.js
+  # - name: Load {{component}} Schema
+  #   ansible.builtin.command: mongo --host mongodb.joindevops.shop < /app/schema/{{component}}.js
