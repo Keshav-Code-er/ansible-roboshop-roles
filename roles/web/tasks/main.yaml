@@ -32,14 +32,11 @@
       remote_src: yes
 
   - name: copy web service
-    ansible.builtin.copy:
+    ansible.builtin.template:
       src: roboshop.conf
       dest: /etc/nginx/default.d/roboshop.conf
-
-  - name: restart the nginx
-    ansible.builtin.service:
-      name: nginx
-      state: restarted
+      notify:
+      - restart nginx
      
 
 
